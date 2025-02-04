@@ -2,6 +2,18 @@ from pathlib import *
 import json, sys, EthorenllProgress
 
 
+# just a demo
+# 这个小脚本仅供测试，可按需修改
+# p.s.封包编码默认UTF-8，如需修改请在调用 EthorenllProgress.encode 时在第四个参数中指定编码
+# usage:
+#
+# 解包
+# python progress.py decode input_dir output_dir
+#
+# 封包
+# python progress.py encode input_dir json_dir output_dir
+
+
 def d():
     input_dir = Path(sys.argv[2])
     output_dir = Path(sys.argv[3])
