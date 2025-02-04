@@ -166,7 +166,11 @@ def encode(orgin_file: Path, json_file: Path, output_file: Path, encode_format =
         if json_data[i]["type"] == "message":
             output_data.write(string.encode(encode_format))
         else:
-            output_data.write(string.encode("shift-jis"))
+            try:
+                output_data.write(string.encode("shift-jis"))
+            except :
+                raise Exception("Can't covert \""+ string+ "\" to shift-jis")
+                
 
         output_data.write(b"\x00")
 
